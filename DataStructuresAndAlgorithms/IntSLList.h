@@ -29,19 +29,35 @@ public:
 class IntSLList
 {
 public:
-	IntSLList()
-	{
+	IntSLList()	{
 		head = tail = 0;
 	}
+
 	~IntSLList();
 
 public:
-	int isEmpty()
-	{
+	// ÊÇ·ñÎª¿Õ
+	int isEmpty() {
 		return head == 0;
 	}
 
+	// 
+	void addToHead(int el);
 
+	// 
+	void addToTail(int el);
+
+	//
+	int deleteFromHead();
+
+	//
+	int deleteFromTail();
+
+	//
+	void deleteNode(int el);
+
+	//
+	bool isInList(int el) const;
 
 
 private:
