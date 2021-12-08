@@ -16,6 +16,9 @@
     <Filter Include="C03_LinkedList">
       <UniqueIdentifier>{d530727a-238d-4f59-bf74-e304e3f7bcb2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="C04_Stack">
+      <UniqueIdentifier>{a810c011-2511-4049-8742-589c82112afa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -24,9 +27,21 @@
     <ClCompile Include="IntSLList.cpp">
       <Filter>C03_LinkedList</Filter>
     </ClCompile>
+    <ClCompile Include="GenStack.cpp">
+      <Filter>C04_Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="DLList.cpp">
+      <Filter>C03_LinkedList</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IntSLList.h">
+      <Filter>C03_LinkedList</Filter>
+    </ClInclude>
+    <ClInclude Include="GenStack.h">
+      <Filter>C04_Stack</Filter>
+    </ClInclude>
+    <ClInclude Include="DLList.h">
       <Filter>C03_LinkedList</Filter>
     </ClInclude>
   </ItemGroup>

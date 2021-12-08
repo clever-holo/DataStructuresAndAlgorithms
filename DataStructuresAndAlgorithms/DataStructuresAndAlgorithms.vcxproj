@@ -60,10 +60,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DLList.cpp" />
+    <ClCompile Include="GenStack.cpp" />
     <ClCompile Include="IntSLList.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DLList.h" />
+    <ClInclude Include="GenStack.h" />
     <ClInclude Include="IntSLList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
