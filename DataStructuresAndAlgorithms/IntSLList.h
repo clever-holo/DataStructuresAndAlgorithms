@@ -10,9 +10,10 @@ class IntSLLNode
 public:
 	IntSLLNode()
 	{
+		info = 0;
 		next = 0;
 	}
-	IntSLLNode(int el, IntSLLNode *ptr = 0)
+	IntSLLNode(int el, IntSLLNode *ptr = nullptr)
 	{
 		info = el;
 		next = ptr;
@@ -29,17 +30,21 @@ public:
 class IntSLList
 {
 public:
-	IntSLList()	{
-		head = tail = 0;
+	IntSLList()	
+	{
+		head = tail = nullptr;
 	}
 
 	~IntSLList();
 
 public:
 	// ÊÇ·ñÎª¿Õ
-	int isEmpty() {
-		return head == 0;
+	int isEmpty() 
+	{
+		return head == nullptr;
 	}
+
+	int getLength();
 
 	// 
 	void addToHead(int el);

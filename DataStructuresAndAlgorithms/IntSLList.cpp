@@ -10,12 +10,27 @@ IntSLList::~IntSLList()
 	}
 }
 
+int IntSLList::getLength()
+{
+	int len = 0;
+
+	IntSLLNode* pNode = head;
+	while (pNode != nullptr)
+	{
+		len++;
+		pNode = pNode->next;
+	}
+	return len;
+}
+
 void IntSLList::addToHead(int el)
 {
-	if(head == 0){
+	if(head == nullptr)
+	{
 		head = tail = new IntSLLNode(el);
 	}
-	else{
+	else
+	{
 		head = new IntSLLNode(el, head);
 	}
 	return;

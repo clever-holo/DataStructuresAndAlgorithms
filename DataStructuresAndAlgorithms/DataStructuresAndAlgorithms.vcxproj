@@ -60,7 +60,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="DLList.cpp" />
     <ClCompile Include="GenStack.cpp" />
     <ClCompile Include="IntSLList.cpp" />
     <ClCompile Include="main.cpp" />

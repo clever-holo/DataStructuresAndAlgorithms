@@ -30,9 +30,6 @@
     <ClCompile Include="GenStack.cpp">
       <Filter>C04_Stack</Filter>
     </ClCompile>
-    <ClCompile Include="DLList.cpp">
-      <Filter>C03_LinkedList</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IntSLList.h">

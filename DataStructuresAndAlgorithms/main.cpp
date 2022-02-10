@@ -2,25 +2,34 @@
 #include <stdlib.h>
 #include <iostream>
 #include <list>
+#include "DLList.h"
 
 int main(int argc, char* argv[])
 {
-	std::cout << "hello world!" << std::endl;
+	DLList<int> dl;
+	dl.insertBack(1);
+	std::cout << dl << std::endl;
 
-	std::list<int> lst1;
+	dl.insertFront(2);
+	std::cout << dl << std::endl;
 
-	for(int i=0; i<5; i++)
-		lst1.push_back(i+1);
+	dl.insertBack(3);
+	std::cout << dl << std::endl;
 
-	std::list<int>::iterator it1 = lst1.begin();
+	dl.insertBack(4);
+	std::cout << dl << std::endl;
 
-	std::list<int>::iterator it2 = it1;
+	dl.deleteVal(4);
+	std::cout << dl << std::endl;
 
-	std::list<int> lst2(it1, it2);
+	dl.deleteVal(3);
+	std::cout << dl << std::endl;
 
-	it2++;
+	dl.deleteVal(2);
+	std::cout << dl << std::endl;
 
-	std::list<int> lst3(it1, it2);
+	dl.deleteVal(1);
+	std::cout << dl << std::endl;
 
 	system("pause");
 	return 0;
