@@ -41,7 +41,7 @@ public:
 	}
 
 	// 从头插入
-	void insertFront(T val)
+	void push_front(T val)
 	{
 		Node *node = new Node(val);
 		if(head == nullptr)
@@ -58,7 +58,7 @@ public:
 	}
 
 	// 从尾插入
-	void insertBack(T val)
+	void push_back(T val)
 	{
 		Node *node = new Node(val);
 		if(head == nullptr)
@@ -71,6 +71,48 @@ public:
 			node->prev = tail;
 			tail->next = node;
 			tail = node;
+		}
+	}
+
+	// 删除第一个节点
+	void pop_front()
+	{
+		if(head != nullptr)
+		{
+			// 只有一个节点
+			if(head->next == nullptr)
+			{
+				delete head;
+				head == nullptr;
+				tail == nullptr;
+			}
+			else
+			{
+				head = head->next;
+				delete head->prev;
+				head->prev = nullptr;
+			}
+		}
+	}
+
+	// 删除最后一个节点
+	void pop_back()
+	{
+		if(tail != nullptr)
+		{
+			// 只有一个节点
+			if(tail->prev == nullptr)
+			{
+				delete tail;
+				head == nullptr;
+				tail == nullptr;
+			}
+			else
+			{
+				tail = tail->prev;
+				delete tail->next;
+				head->next = nullptr;
+			}
 		}
 	}
 
@@ -103,6 +145,10 @@ public:
 				// 后一个节点指向前边
 				node->next->prev = node->prev;
 			}
+
+			// 删除节点
+			delete node;
+			node = nullptr;
 		}
 	}
 
