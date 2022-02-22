@@ -40,6 +40,24 @@ public:
 		return findVal(val) != nullptr;
 	}
 
+	// 返回链表第一个节点中的元素
+	T& front()
+	{
+		if(head == nullptr)
+			return temp;
+		else
+			return head->data;
+	}
+
+	// 返回链表最后一个节点中的元素
+	T& back()
+	{
+		if(tail == nullptr)
+			return temp;
+		else
+			return tail->data;
+	} 
+
 	// 从头插入
 	void push_front(T val)
 	{
@@ -83,8 +101,8 @@ public:
 			if(head->next == nullptr)
 			{
 				delete head;
-				head == nullptr;
-				tail == nullptr;
+				head = nullptr;
+				tail = nullptr;
 			}
 			else
 			{
@@ -104,14 +122,14 @@ public:
 			if(tail->prev == nullptr)
 			{
 				delete tail;
-				head == nullptr;
-				tail == nullptr;
+				head = nullptr;
+				tail = nullptr;
 			}
 			else
 			{
 				tail = tail->prev;
 				delete tail->next;
-				head->next = nullptr;
+				tail->next = nullptr;
 			}
 		}
 	}
@@ -154,7 +172,7 @@ public:
 
 	friend std::ostream& operator << (std::ostream& out, DLList<T>& dll)
 	{
-		out << "asc: ";
+		out << "asc : ";
 		for (Node* temp = dll.head; temp != nullptr; temp = temp->next)
 		{
 			out << temp->data << " ";
@@ -185,5 +203,7 @@ private:
 private:
 	Node *head;
 	Node *tail;
+
+	T temp;
 
 };
