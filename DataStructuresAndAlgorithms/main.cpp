@@ -1,34 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
-#include <list>
-#include "DLList.h"
+#include <cmath>
+#include "BETree.h"
 
 int main(int argc, char* argv[])
 {
-	DLList<int> dl;
 
-	dl.push_back(1);
-	dl.push_back(2);
-	dl.push_back(3);
-	dl.push_back(4);
+	BETreeAnalysor* pAnalysor = new BETreeAnalysor();
 
+	pAnalysor->SetParam("x", 10);
+	pAnalysor->SetParam("y", 20);
 
-	dl.pop_back();
-	std::cout << dl << std::endl;
+	pAnalysor->InitExp("2 * x + y");
+	float val = pAnalysor->Value();
 
-	dl.pop_front();
-	std::cout << dl << std::endl;
+	pAnalysor->SetParam("x", 33);
+	pAnalysor->SetParam("y", 20);
+	float val2 = pAnalysor->Value();
 
-	dl.pop_front();
-	std::cout << dl << std::endl;
-
-	dl.pop_back();
-	std::cout << dl << std::endl;
-
-	dl.pop_front();
-	std::cout << dl << std::endl;
-
-	system("pause");
+ 	system("pause");
 	return 0;
 }

@@ -13,33 +13,54 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="C03_LinkedList">
+    <Filter Include="LinkedList">
       <UniqueIdentifier>{d530727a-238d-4f59-bf74-e304e3f7bcb2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="C04_Stack">
+    <Filter Include="Stack">
       <UniqueIdentifier>{a810c011-2511-4049-8742-589c82112afa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Queue">
+      <UniqueIdentifier>{b912d985-a052-48bc-bcf4-6fe7a218c10b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tree">
+      <UniqueIdentifier>{6dec2bff-4107-480c-be43-0e9eed9b70d2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="IntSLList.cpp">
+      <Filter>LinkedList</Filter>
+    </ClCompile>
+    <ClCompile Include="GenStack.cpp">
+      <Filter>Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="GenBST.cpp">
+      <Filter>Tree</Filter>
+    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="IntSLList.cpp">
-      <Filter>C03_LinkedList</Filter>
-    </ClCompile>
-    <ClCompile Include="GenStack.cpp">
-      <Filter>C04_Stack</Filter>
+    <ClCompile Include="BETree.cpp">
+      <Filter>Tree</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IntSLList.h">
-      <Filter>C03_LinkedList</Filter>
+      <Filter>LinkedList</Filter>
     </ClInclude>
     <ClInclude Include="GenStack.h">
-      <Filter>C04_Stack</Filter>
+      <Filter>Stack</Filter>
     </ClInclude>
     <ClInclude Include="DLList.h">
-      <Filter>C03_LinkedList</Filter>
+      <Filter>LinkedList</Filter>
+    </ClInclude>
+    <ClInclude Include="ArrQueue.h">
+      <Filter>Queue</Filter>
+    </ClInclude>
+    <ClInclude Include="GenBST.h">
+      <Filter>Tree</Filter>
+    </ClInclude>
+    <ClInclude Include="BETree.h">
+      <Filter>Tree</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

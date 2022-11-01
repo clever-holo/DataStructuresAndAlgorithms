@@ -60,14 +60,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BETree.cpp" />
+    <ClCompile Include="GenBST.cpp" />
     <ClCompile Include="GenStack.cpp" />
     <ClCompile Include="IntSLList.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BETree.h" />
     <ClInclude Include="DLList.h" />
+    <ClInclude Include="GenBST.h" />
     <ClInclude Include="GenStack.h" />
     <ClInclude Include="IntSLList.h" />
+    <ClInclude Include="ArrQueue.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
